@@ -1,15 +1,15 @@
-# Dependency folder (auto-generated)
+# Dependency folder 
 node_modules
 
-# Environment variables (never upload secrets)
+# Environment variables
 .env
 
 # Uploaded images folder
 uploads
 
-# Logs (not needed on GitHub)
+# Logs 
 *.log
 
-# System files (Mac/Windows)
+# System files 
 .DS_Store
 Thumbs.db
