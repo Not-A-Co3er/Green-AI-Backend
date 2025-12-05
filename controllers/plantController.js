@@ -1,6 +1,6 @@
 // controllers/plantController.js
 import axios from "axios";
-import plantPredictionModel from "../Models/plantPredictionModel.js";
+import plantPredictionModel from "../models/plantPredictionModel.js";
 //import userModel from "../Models/userModel.js"; // optional if you want extra checks
 
 // POST /api/plants/analyze
