@@ -1,0 +1,15 @@
+# Dependency folder (auto-generated)
+node_modules
+
+# Environment variables (never upload secrets)
+.env
+
+# Uploaded images folder
+uploads
+
+# Logs (not needed on GitHub)
+*.log
+
+# System files (Mac/Windows)
+.DS_Store
+Thumbs.db
