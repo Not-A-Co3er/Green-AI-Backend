@@ -36,12 +36,13 @@ export const register = async (req, res) => {
         const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, { expiresIn: '7d' });
 
         // Store token in cookie
-        res.cookie('token', token, {
-            httpOnly: true,                                    // Prevents JS access to cookie
-            secure: process.env.NODE_ENV === 'production',     // Uses HTTPS only in production
-            sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'strict',
-            maxAge: 7 * 24 * 60 * 60 * 1000                     // Cookie expiry: 7 days
-        });
+        res.cookie("token", token, {
+  httpOnly: true,
+  secure: true,
+  sameSite: "none",
+  path: "/",
+});
+
 
         // Sending welcome email
         const mailOptions = {
