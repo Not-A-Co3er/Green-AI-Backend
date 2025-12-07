@@ -14,3 +14,6 @@ userRouter.get('/data', userAuth, getUserData);
 
 // Export router so it can be used in server.js
 export default userRouter;
+
+
+

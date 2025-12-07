@@ -47,9 +47,13 @@ app.use(cookieParser());                             // Allows backend to read c
 // credentials: true → allows cookies to be sent between frontend ↔ backend
 
 // Without this → frontend would get CORS errors and login wouldn’t work.
-app.use(cors({                                       
-  credentials: true,                                 // Allow cookies to be sent cross-origin
-  origin: "http://localhost:5173"                    // Insert your server(frontend wala server)
+app.use(cors({
+  origin: [
+    "http://127.0.0.1:5500",
+    "http://localhost:5500",
+    "http://localhost:5173"
+  ],
+  credentials: true
 }));
 
 
@@ -69,6 +73,7 @@ app.get('/', (req, res) => res.send("API Working Very Nicely"));  // Test defaul
 app.use('/api/auth', authRouter);                 // Handles login, register, OTP, reset password
 app.use('/api/user', userRouter);                 // Handles user-related actions (profile etc.)
 app.use('/api/plants', plantRouter);              // Handles image upload + ML based plant prediction
+
 
 
 // ------------------- Start Server -------------------
