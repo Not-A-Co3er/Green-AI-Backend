@@ -9,6 +9,7 @@ import connectDB from "./config/mongodb.js";         // MongoDB connection funct
 import authRouter from "./routes/authRoutes.js";     // Authentication routes
 import userRouter from "./routes/userRoutes.js";     // User profile routes
 import plantRouter from "./routes/plantRoutes.js";   // Plant analysis routes (AI module)
+import communityRouter from "./routes/communityRoutes.js";  // ⬅ Community Garden Routes
 
 
 // ------------------- Server Setup -------------------
@@ -73,6 +74,7 @@ app.get('/', (req, res) => res.send("API Working Very Nicely"));  // Test defaul
 app.use('/api/auth', authRouter);                 // Handles login, register, OTP, reset password
 app.use('/api/user', userRouter);                 // Handles user-related actions (profile etc.)
 app.use('/api/plants', plantRouter);              // Handles image upload + ML based plant prediction
+app.use('/api/community', communityRouter);       // Handles community feed (posts, likes, comments)
 
 
 
